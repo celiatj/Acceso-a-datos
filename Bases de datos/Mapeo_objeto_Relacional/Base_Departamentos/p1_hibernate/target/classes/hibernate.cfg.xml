@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/ejemploh</property>		<!-- Cambiar basededatos por nombre de la base de datos -->
+    <property name="hibernate.connection.username">root</property>							            <!-- Nombre de usuario de la base de datos -->
+    <property name="hibernate.connection.password">root</property>						              <!-- Contraseña de usuario de la base de datos -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="hibernate.show_sql">false</property>
+
+    <!-- Se registran las clases que hay que mapear con cada tabla de la base de datos -->
+    <mapping class="org.iesabastos.dam.datos.ggm.Empleado"/>
+    <mapping class="org.iesabastos.dam.datos.ggm.Departamento"/>
+    <!-- Fin registro de clases mapeadas -->
+   </session-factory>
+</hibernate-configuration>
